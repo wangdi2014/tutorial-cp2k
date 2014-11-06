@@ -1,8 +1,8 @@
 universe = vanilla
 
-output = log/cp2k.out.$(Process)
-error = log/cp2k.error.$(Process)
-log = log/cp2k.log.$(Process)
+output = job.out.$(Process)
+error = job.error.$(Process)
+log = job.log.$(Process)
 
 executable = cp2k.sh
 arguments = cs_cell_opt_direct_lbfgs.inp
