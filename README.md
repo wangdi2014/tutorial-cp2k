@@ -1,3 +1,5 @@
+Table of Contents
+=================
 
 * [CP2K - Electronic Structure Calcualtions](#cp2k---electronic-structure-calcualtions)
     * [Overview](#overview)
