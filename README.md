@@ -1,4 +1,4 @@
-# CP2K - Electronic Structure Calcualtions
+# CP2K - Electronic Structure Calculations
 
    * [Overview](#overview)
    * [Quick steps to run CP2K](#quick-steps-to-run-cp2k)
@@ -82,8 +82,5 @@ $ condor_q username # The status of the job is printed on the screen. Here, user
  
 After the simulation is completed, you will see the output files from CP2K including the main output file, trajectory files and restart files in your work directory.
 
-## Help
-For further assistance or questions, please email connect-support@uchicago.edu.
-
-
-
+##Help
+For further assistance or questions, please email `connect-support@opensciencegrid.org` or visit http://support.opensciencegrid.org. 
