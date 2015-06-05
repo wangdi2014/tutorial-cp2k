@@ -1,16 +1,12 @@
-Table of Contents
-=================
-
-* [CP2K - Electronic Structure Calcualtions](#cp2k---electronic-structure-calcualtions)
-    * [Overview](#overview)
-    * [Quick steps to run CP2K](#quick-steps-to-run-cp2k)
-    * [CP2K tutorial files](#cp2k-tutorial-files)
-    * [Job execution and submission files](#job-execution-and-submission-files)
-    * [Running the simulation](#running-the-simulation)
-    * [Help](#help)
-
-
 # CP2K - Electronic Structure Calcualtions
+
+   * [Overview](#overview)
+   * [Quick steps to run CP2K](#quick-steps-to-run-cp2k)
+   * [CP2K tutorial files](#cp2k-tutorial-files)
+   * [Job execution and submission files](#job-execution-and-submission-files)
+   * [Running the simulation](#running-the-simulation)
+   * [Help](#help)
+
 
 ## Overview
 CP2K provides a general framework for performing simulations with the density functional theory (DFT) using a mixed Gaussian and plane waves approach (GPW) and classical pair and many-body potentials.
