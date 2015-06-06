@@ -1,4 +1,4 @@
-# CP2K - Electronic Structure Calculations
+# Electronic Structure Calculations with CP2K
 
    * [Overview](#overview)
    * [Quick steps to run CP2K](#quick-steps-to-run-cp2k)
@@ -9,8 +9,8 @@
 
 
 ## Overview
-CP2K provides a general framework for performing simulations with the density functional theory (DFT) using a mixed Gaussian and plane waves approach (GPW) and classical pair and many-body potentials.
- 
+[CP2K](http://www.cp2k.org/) is an open source program to perform atomistic and molecular simulations of solid state, liquid, molecular, and biological systems. It provides a general framework for different methods such as e.g., density functional theory (DFT) using a mixed Gaussian and plane waves approach (GPW) and classical pair and many-body potentials.
+
 ## Quick steps to run CP2K
 ```
 $ tutorial cp2k                 # Copies input and script files to the directory "tutorial-cp2k".
@@ -82,5 +82,5 @@ $ condor_q username # The status of the job is printed on the screen. Here, user
  
 After the simulation is completed, you will see the output files from CP2K including the main output file, trajectory files and restart files in your work directory.
 
-##Help
-For further assistance or questions, please email `connect-support@opensciencegrid.org` or visit http://support.opensciencegrid.org. 
+## Getting Help
+For assistance or questions, please email the OSG User Support team  at `user-support@opensciencegrid.org` or visit the [help desk and community forums](http://support.opensciencegrid.org).
