@@ -8,5 +8,6 @@ executable = cp2k.sh
 arguments = cs_cell_opt_direct_lbfgs.inp
 
 transfer_input_files = cs_cell_opt_direct_lbfgs.inp
+requirements = (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
 
 queue 1
