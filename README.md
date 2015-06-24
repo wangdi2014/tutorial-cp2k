@@ -12,20 +12,25 @@
 [CP2K](http://www.cp2k.org/) is an open source program to perform atomistic and molecular simulations of solid state, liquid, molecular, and biological systems. It provides a general framework for different methods such as e.g., density functional theory (DFT) using a mixed Gaussian and plane waves approach (GPW) and classical pair and many-body potentials.
 
 ## Quick steps to run CP2K
+
 	$ tutorial cp2k                 # Copies input and script files to the directory "tutorial-cp2k".
 	$ cd tutorial-cp2k              # Takes you to the directory "tutorial-cp2k".
 	$ condor_submit cp2k_run.submit # Submits the condor job script file "cp2k_run.submit".
+
 After few minutes, CP2K outputs are generated in the directory `tutorial-cp2k`. In the following sections, we will discuss the details of preparing the input and job script files to run the CP2K simulations.
 
 ## CP2K tutorial files
 
 In the command prompt, type
+
 	$ tutorial cp2k # Copies the input and script files to the directory tutorial-cp2k.
 
 This will create a directory `tutorial-cp2k`. Inside the directory, you will see the following files
+
 	cp2k_run.submit               # Condor job submission script file.
 	cp2k_run.sh                   # Job execution script file.
 	cs_cell_opt_direct_lbfgs.inp  # Input configuration file  for running the cp2k simulation. 
+	
 Here, `cp2k_run.submit` and `cp2k_run.sh` are the script files related to job submission and the file 
 `cs_cell_opt_direct_lbfgs.inp` is the input file for the CP2K simulation. The details regarding the 
 preparation of the input file for CP2K are available at the CP2K website.
@@ -37,7 +42,9 @@ about the key words in the script file. Here, we will discuss the condor file tr
 word “transfer_input_files”  specifies what input files are transferred from the login machine 
 (where you log in and submit the jobs) to the remote worker machine (where the jobs are being executed). In 
 the "CP2K_run.submit" file, the option
+
 	transfer_input_files = cs_cell_opt_direct_lbfgs.inp # Name of the input file transferred to the worker machine.
+
 means that the listed file "cs_cell_opt_direct_lbfgs.inp"  is transferred from the login machine to the 
 worker machine.  Similarly, we can specify the output files from the worker machine to Midway by adding the 
 following lines in the condor job submission script file - "cp2k_run.submit".
