@@ -36,24 +36,32 @@ The file `cp2k_run.submit` is the condor description file.  Please refer to the 
 about the key words in the script file. Here, we will discuss the condor file transfer mechanism. The key 
 word “transfer_input_files”  specifies what input files are transferred from the login machine 
 (where you log in and submit the jobs) to the remote worker machine (where the jobs are being executed). In 
-the "CP2K_run.submit" file, the keyword
-	transfer_input_files = cs_cell_opt_direct_lbfgs.inp # Name of the input file transferred to the worker machine.
+the "CP2K_run.submit" file, the option
+```
+transfer_input_files = cs_cell_opt_direct_lbfgs.inp # Name of the input file transferred to the worker machine.
+```
 means that the listed file "cs_cell_opt_direct_lbfgs.inp"  is transferred from the login machine to the 
 worker machine.  Similarly, we can specify the output files from the worker machine to Midway by adding the 
 following lines in the condor job submission script file - "cp2k_run.submit".
-	transfer_output_files = file1.out, file2.out, file3.out ... etc # List of output files separated by commas.
-	should_transfer_files=Yes          # Key word to activate the file transfer
-	when_to_transfer_output = ON_EXIT  # After the job execution is finished
+
+```
+transfer_output_files = file1.out, file2.out, file3.out ... etc # List of output files separated by commas.
+should_transfer_files=Yes          # Key word to activate the file transfer
+when_to_transfer_output = ON_EXIT  # After the job execution is finished
+ ```
  
 For vanilla universe jobs, all the output files are transferred 
 automatically (the current example runs the job in the vanilla universe). In other universe types, for example 
 grid universe, the user needs to specify the list of output files. 
 
 The script file “CP2K_run.sh” includes information about loading the module and the job execution commands:
-	#!/bin/bash
-	source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/5.6.2/init/bash # Reads and executes the bash file located in the init directory.
-	module load cp2k  # Sets up cp2k module
-	cp2k.x cs_cell_opt_direct_lbfgs.inp > cs_cell_opt_direct_lbfgs.out   # Runs the CP2K program
+```
+#!/bin/bash
+source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/5.6.2/init/bash # Reads and executes the bash file located in the init directory.
+module load cp2k  # Sets up cp2k module
+cp2k.x cs_cell_opt_direct_lbfgs.inp > cs_cell_opt_direct_lbfgs.out   # Runs the CP2K program
+```
+
 ## Running the simulation
  
 To run the simulation, type
