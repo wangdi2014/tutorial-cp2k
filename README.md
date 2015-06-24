@@ -45,29 +45,28 @@ following lines in the condor job submission script file - "cp2k_run.submit".
 	transfer_output_files = file1.out, file2.out, file3.out ... etc # List of output files separated by commas.
 	should_transfer_files=Yes          # Key word to activate the file transfer
 	when_to_transfer_output = ON_EXIT  # After the job execution is finished
-	 ```
+	
 	 
-	For vanilla universe jobs, all the output files are transferred 
-	automatically (the current example runs the job in the vanilla universe). In other universe types, for example 
-	grid universe, the user needs to specify the list of output files. 
+For vanilla universe jobs, all the output files are transferred  automatically (the current example runs the job in the vanilla universe). In other universe types, for example  grid universe, the user needs to specify the list of output files. 
 	
-	The script file “CP2K_run.sh” includes information about loading the module and the job execution commands:
-#!/bin/bash
-source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/5.6.2/init/bash # Reads and executes the bash file located in the init directory.
-module load cp2k  # Sets up cp2k module
-cp2k.x cs_cell_opt_direct_lbfgs.inp > cs_cell_opt_direct_lbfgs.out   # Runs the CP2K program
+The script file “CP2K_run.sh” includes information about loading the module and the job execution commands:
+
+	#!/bin/bash
+	source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/5.6.2/init/bash # Reads and executes the bash file located in the init directory.
+	module load cp2k  # Sets up cp2k module
+	cp2k.x cs_cell_opt_direct_lbfgs.inp > cs_cell_opt_direct_lbfgs.out   # Runs the CP2K program
 	
-	## Running the simulation
+## Running the simulation
 	 
-	To run the simulation, type
+To run the simulation, type
 	
-		$ condor_submit cp2k_run.submit # Submit the condor job script "cp2k_run.submit"
+	$ condor_submit cp2k_run.submit # Submit the condor job script "cp2k_run.submit"
 	 
-	Now you have submitted the CP2K simulation on the open science grid. The present job should be finished quickly (in less than an hour). You can check the status of the submitted job by typing
+Now you have submitted the CP2K simulation on the open science grid. The present job should be finished quickly (in less than an hour). You can check the status of the submitted job by typing
 	
-		$ condor_q username # The status of the job is printed on the screen. Here, username is your login name.
+	$ condor_q username # The status of the job is printed on the screen. Here, username is your login name.
 	 
-	After the simulation is completed, you will see the output files from CP2K including the main output file, trajectory files and restart files in your work directory.
+After the simulation is completed, you will see the output files from CP2K including the main output file, trajectory files and restart files in your work directory.
 	
-	## Getting Help
-	For assistance or questions, please email the OSG User Support team  at `user-support@opensciencegrid.org` or visit the [help desk and community forums](http://support.opensciencegrid.org).
+## Getting Help
+For assistance or questions, please email the OSG User Support team  at `user-support@opensciencegrid.org` or visit the [help desk and community forums](http://support.opensciencegrid.org).
