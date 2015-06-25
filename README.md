@@ -1,13 +1,6 @@
-# Electronic Structure Calculations with CP2K
+[title]: - "Electronic Structure Calculations with CP2K"
 
-   * [Overview](#overview)
-   * [Quick steps to run CP2K](#quick-steps-to-run-cp2k)
-   * [CP2K tutorial files](#cp2k-tutorial-files)
-   * [Job execution and submission files](#job-execution-and-submission-files)
-   * [Running the simulation](#running-the-simulation)
-   * [Help](#help)
-
-
+   
 ## Overview
 [CP2K](http://www.cp2k.org/) is an open source program to perform atomistic and molecular simulations of solid state, liquid, molecular, and biological systems. It provides a general framework for different methods such as e.g., density functional theory (DFT) using a mixed Gaussian and plane waves approach (GPW) and classical pair and many-body potentials.
 
