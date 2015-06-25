@@ -31,16 +31,15 @@ preparation of the input file for CP2K are available at the CP2K website.
 ## Job execution and submission files
 
 The file `cp2k_run.submit` is the condor description file.  Please refer to the Quickstart tutorial to learn 
-about the key words in the script file. Here, we will discuss the condor file transfer mechanism. The key 
-word “transfer_input_files”  specifies what input files are transferred from the login machine 
+about the key words in the script file. Here, we will discuss the condor file transfer mechanism. The option `transfer_input_files`  specifies what input files are transferred from the login machine 
 (where you log in and submit the jobs) to the remote worker machine (where the jobs are being executed). In 
-the "CP2K_run.submit" file, the option
+the `CP2K_run.submit` file, the option
 
 	transfer_input_files = cs_cell_opt_direct_lbfgs.inp # Name of the input file transferred to the worker machine.
 
-means that the listed file "cs_cell_opt_direct_lbfgs.inp"  is transferred from the login machine to the 
+means that the listed file `cs_cell_opt_direct_lbfgs.inp`  is transferred from the login machine to the 
 worker machine.  Similarly, we can specify the output files from the worker machine to Midway by adding the 
-following lines in the condor job submission script file - "cp2k_run.submit".
+following lines in the condor job submission script file - `cp2k_run.submit`.
 
 	transfer_output_files = file1.out, file2.out, file3.out ... etc # List of output files separated by commas.
 	should_transfer_files=Yes          # Key word to activate the file transfer
@@ -49,7 +48,7 @@ following lines in the condor job submission script file - "cp2k_run.submit".
 	 
 For vanilla universe jobs, all the output files are transferred  automatically (the current example runs the job in the vanilla universe). In other universe types, for example  grid universe, the user needs to specify the list of output files. 
 	
-The script file “CP2K_run.sh” includes information about loading the module and the job execution commands:
+The script file `CP2K_run.sh` includes information about loading the module and the job execution commands:
 
 	#!/bin/bash
 	source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/5.6.2/init/bash # Reads and executes the bash file located in the init directory.
@@ -69,4 +68,4 @@ Now you have submitted the CP2K simulation on the open science grid. The present
 After the simulation is completed, you will see the output files from CP2K including the main output file, trajectory files and restart files in your work directory.
 	
 ## Getting Help
-For assistance or questions, please email the OSG User Support team  at `user-support@opensciencegrid.org` or visit the [help desk and community forums](http://support.opensciencegrid.org).
+For assistance or questions, please email the OSG User Support team  at <mailto:user-support@opensciencegrid.org> or visit the [help desk and community forums](http://support.opensciencegrid.org).
